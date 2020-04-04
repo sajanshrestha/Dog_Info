@@ -31,8 +31,3 @@ def save_breeds():
                            (name, size, height, weight, coat, energy, activities))
             connector.commit()
     connector.close()
-
-
-query = 'select * from breeds where name=?'
-result = cursor.execute(query, ('Boxer',))
-print(result.fetchone())
