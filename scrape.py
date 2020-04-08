@@ -3,10 +3,10 @@ from bs4 import BeautifulSoup
 
 base_url = 'https://www.purina.com'
 
-''' gets all the links from the current page '''
-
 
 def get_all_links(url):
+    ''' gets all the links from the current page '''
+
     html = requests.get(url).text
     bs_obj = BeautifulSoup(html, 'lxml')
 
@@ -15,10 +15,9 @@ def get_all_links(url):
     return links
 
 
-''' goes to the link and gets the info '''
-
-
 def get_info(url):
+    ''' goes to the link and gets the info '''
+
     html = requests.get(url).text
     bs_obj = BeautifulSoup(html, 'lxml')
 
